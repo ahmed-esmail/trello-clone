@@ -69,6 +69,7 @@ export const NewItemButton = styled.button`
   border-radius: 3px;
   border: none;
   box-shadow: none;
+  cursor: pointer;
   color: #fff;
   padding: 6px 12px;
   text-align: center;

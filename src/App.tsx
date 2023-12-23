@@ -7,7 +7,7 @@ import { AddNewItem } from "./AddNewItem";
 export const App = () => {
   return (
     <AppContainer>
-      <Column text="Todo:"></Column>
+      <Column text="Todo:" />
       <AddNewItem
         onAdd={(text) => console.log("Add new card ", text)}
         toggleButtonText={"+ Add another list"}
