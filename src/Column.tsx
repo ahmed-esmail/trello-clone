@@ -10,11 +10,12 @@ type ColumnProps = {
 };
 
 export const Column = ({ text, id }: ColumnProps) => {
-  const { getTasksByListId } = useAppState();
+  const { findTasksByListId } = useAppState();
+
   return (
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
-      {getTasksByListId(id).map((task) => (
+      {findTasksByListId(id).map((task) => (
         <Card text={task.text} key={task.id} />
       ))}
       <AddNewItem

@@ -35,13 +35,13 @@ const appData: AppState = {
   ],
 };
 
-type AppStateContextProps = {
-  state: List[];
-  getTasksByListId(id: string): Task[];
+type AppStateContextValue = {
+  lists: List[];
+  findTasksByListId(id: string): Task[];
 };
 
-const appStateContext = createContext<AppStateContextProps>(
-  {} as AppStateContextProps,
+const AppStateContext = createContext<AppStateContextValue>(
+  {} as AppStateContextValue,
 );
 
 type AppStateProviderProps = {
@@ -51,17 +51,17 @@ type AppStateProviderProps = {
 export const AppStateProvider: FC<AppStateProviderProps> = ({ children }) => {
   const { lists } = appData;
 
-  const getTasksByListId = (id: string) => {
+  const findTasksByListId = (id: string) => {
     return lists.find((list) => list.id === id)?.tasks || [];
   };
 
   return (
-    <appStateContext.Provider value={{ state: lists, getTasksByListId }}>
+    <AppStateContext.Provider value={{ lists, findTasksByListId }}>
       {children}
-    </appStateContext.Provider>
+    </AppStateContext.Provider>
   );
 };
 
 export const useAppState = () => {
-  return useContext(appStateContext);
+  return useContext(AppStateContext);
 };

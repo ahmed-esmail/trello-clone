@@ -6,11 +6,11 @@ import { AddNewItem } from "./AddNewItem";
 import { useAppState } from "./state/AppStateContext";
 
 export const App = () => {
-  const { state } = useAppState();
+  const { lists } = useAppState();
 
   return (
     <AppContainer>
-      {state.map((list) => (
+      {lists.map((list) => (
         <Column text={list.text} key={list.id} id={list.id} />
       ))}
       <AddNewItem
