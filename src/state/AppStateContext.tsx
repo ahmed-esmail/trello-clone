@@ -15,7 +15,10 @@ const appData: AppState = {
     {
       id: "1",
       text: "In Progress",
-      tasks: [{ id: "c2", text: "Learn TypeScript" }],
+      tasks: [
+        { id: "c2", text: "Learn TypeScript" },
+        { id: "c3", text: "Learn C#" },
+      ],
     },
     {
       id: "2",

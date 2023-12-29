@@ -43,7 +43,13 @@ export const Column = ({ text, id, isPreview }: ColumnProps) => {
     >
       <ColumnTitle>{text}</ColumnTitle>
       {findTasksByListId(id).map((task) => (
-        <Card text={task.text} key={task.id} />
+        <Card
+          text={task.text}
+          key={task.id}
+          columnId={id}
+          id={id}
+          isPreview={isPreview}
+        />
       ))}
       <AddNewItem
         $dark
