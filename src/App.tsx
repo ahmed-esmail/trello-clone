@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { AppContainer, CustomDragLayerContainer } from "./styles";
+import { AppContainer } from "./styles";
 import { Column } from "./Column";
 import { AddNewItem } from "./AddNewItem";
 import { useAppState } from "./state/AppStateContext";

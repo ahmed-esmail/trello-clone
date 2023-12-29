@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { isHidden } from "./utils/isHidden";
 import { useItemDrag } from "./utils/useItemDrag";
 import { throttle } from "throttle-debounce-ts";
-import { moveTask, setDraggedItem } from "./state/actions";
+import { setDraggedItem } from "./state/actions";
 
 type CardProps = {
   text: string;
