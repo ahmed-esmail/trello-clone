@@ -8,15 +8,10 @@ export function findItemIndexById<TItem extends Item>(
 ) {
   return items.findIndex((i) => i.id === id);
 }
-
-export function removeItemAtIndex<TItem extends Item>(
-  items: TItem[],
-  index: number,
-) {
+function removeItemAtIndex<TItem extends Item>(items: TItem[], index: number) {
   return [...items.slice(0, index), ...items.slice(index + 1)];
 }
-
-export function insertItemAtIndex<TItem extends Item>(
+function insertItemAtIndex<TItem extends Item>(
   items: TItem[],
   index: number,
   item: TItem,
