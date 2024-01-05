@@ -23,7 +23,7 @@ const appData: AppState = {
     {
       id: "2",
       text: "Done",
-      tasks: [{ id: "c3", text: "Begin to use static typing" }],
+      tasks: [{ id: "c4", text: "Begin to use static typing" }],
     },
   ],
 };

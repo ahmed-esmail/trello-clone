@@ -8,6 +8,7 @@ type NewItemFormProps = {
 
 const MyComponent = ({ onAdd }: NewItemFormProps) => {
   const [inputText, setInputText] = useState("");
+  const [disable, setDisable] = useState(true);
   const inputRef = useFocus();
 
   const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -16,15 +17,28 @@ const MyComponent = ({ onAdd }: NewItemFormProps) => {
     }
   };
 
+  const handleOnChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const text = e.target.value;
+    if (!text || /^\s*$/.test(text)) {
+      setDisable(true);
+      return;
+    }
+    setDisable(false);
+    setInputText(text);
+  };
+
   return (
     <NewItemFormContainer>
       <NewItemInput
         onKeyDown={handleEnterPress}
         ref={inputRef}
         placeholder={"Type here"}
-        onChange={(e) => setInputText(e.target.value)}
+        onChange={(e) => handleOnChangeEvent(e)}
       ></NewItemInput>
-      <NewItemButton onClick={() => onAdd(inputText)}> Create</NewItemButton>
+      <NewItemButton onClick={() => onAdd(inputText)} disabled={disable}>
+        {" "}
+        Create
+      </NewItemButton>
     </NewItemFormContainer>
   );
 };
