@@ -1,3 +1,25 @@
+# Trello Clone
+
+## Description
+
+This application is a task management system, similar to Trello, where tasks are organized into columns.
+Each column represents a list of tasks, and each task is represented as a draggable card.
+Users can move these cards within a column or between different columns.
+
+New columns can be created by clicking the "+ Add another list" button,
+and each column has a button at the bottom that allows the creation of new tasks.
+
+One of the key features of this application is its ability to preserve the state of the tasks and columns on the backend.
+This means that even if the page is reloaded, all the tasks and columns will remain in their last known state.
+This provides a persistent user experience across sessions.
+
+## Technologies Used
+1- React
+2- React hooks
+3- Styled components
+4- react-dnd
+5- immer
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -45,5 +67,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Project Use Case Trello Clone
 
