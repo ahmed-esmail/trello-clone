@@ -9,10 +9,6 @@ Users can move these cards within a column or between different columns.
 New columns can be created by clicking the "+ Add another list" button,
 and each column has a button at the bottom that allows the creation of new tasks.
 
-One of the key features of this application is its ability to preserve the state of the tasks and columns on the backend.
-This means that even if the page is reloaded, all the tasks and columns will remain in their last known state.
-This provides a persistent user experience across sessions.
-
 ## Technologies Used
 1- React\
 2- React hooks\
