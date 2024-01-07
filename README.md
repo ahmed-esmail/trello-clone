@@ -14,10 +14,10 @@ This means that even if the page is reloaded, all the tasks and columns will rem
 This provides a persistent user experience across sessions.
 
 ## Technologies Used
-1- React
-2- React hooks
-3- Styled components
-4- react-dnd
+1- React\
+2- React hooks\
+3- Styled components\
+4- react-dnd\
 5- immer
 
 # Getting Started with Create React App
@@ -26,7 +26,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+first you need to run the backend server,
+you can find it here: trello-backend
+
+### `yarn start`
+
+In the client project directory, you can run:
 
 ### `npm start`
 

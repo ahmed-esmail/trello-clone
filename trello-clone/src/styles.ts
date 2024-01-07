@@ -123,3 +123,4 @@ export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(
     },
   }),
 )<DragPreviewWrapperProps>``;
+
